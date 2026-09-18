@@ -114,7 +114,7 @@ python src/visualize_distance.py
 ```
 
 ## Summary of Results
-```text
+
 | Parameter / Metric | Empirical Value |
 | :--- | :--- |
 | **Dataset** | PhysioNet EEG Motor Movement/Imagery (S001) |
@@ -124,4 +124,4 @@ python src/visualize_distance.py
 | **Permutations ($N_{\text{perm}}$)** | $1000$ iterations |
 | **Empirical $p$-value** | $p = 0.0000$ ($p < 0.001$) |
 | **Verdict** | Statistically Significant Divergence |
-```
+
