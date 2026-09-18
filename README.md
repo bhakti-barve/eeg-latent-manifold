@@ -62,7 +62,7 @@ Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band
 ├── README.md                           # Project documentation
 ├── RESULTS.md                          # Detailed statistical findings & interpretations
 └── requirements.txt                    # Project dependencies
-
+---
 ## Methodological Pipeline 
 
 ┌────────────────────────┐    ┌────────────────────────┐    ┌────────────────────────┐
@@ -76,7 +76,7 @@ Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band
 │  • p = 0.0000          │ <──│  • Monte Carlo Permu-  │ <──────────────┘
 │  • Distinct Pathways   │    │    tation Test (N=1000)│
 └────────────────────────┘    └────────────────────────┘
-
+---
 ## Installation & Environment Setup
 
 # 1. Clone the repository
@@ -90,7 +90,7 @@ source venv/bin/activate   # On Windows use: venv\Scripts\activate
 # 3. Install required packages
 pip install -r requirements.txt
 
-
+---
 ## Execution Commands
 
 # Step 1: Download & preprocess PhysioNet EEG data (Outputs data/human_eeg_session.npy)
@@ -108,7 +108,7 @@ python src/visualize.py
 # Step 5: Generate time-resolved distance plot (Saves to results/figures/trajectory_distance_over_time.png)
 python src/visualize_distance.py
 
-
+---
 ## Summary of Results
 
 Parameter/ MetricEmpirical ValueDatasetPhysioNet EEG Motor Movement/Imagery (S001)Sample Size ($N$)$N = 45$ trials per condition (Hand Motor Tasks)Observed Trajectory Distance$0.3207\,\mu\text{V}$Null Distribution Mean$0.1612\,\mu\text{V}$Permutations ($N_{\text{perm}}$)$1000$ iterationsEmpirical $p$-value$p = 0.0000$ ($p < 0.001$)VerdictStatistically Significant Divergence
