@@ -14,16 +14,6 @@ This project takes complex, multi-channel brainwave recordings (EEG) and uses ad
 * **The Result:** We proved with 99.9%+ statistical confidence ($p = 0.0000$) that these two mental tasks follow distinct routes.
 * **Why It Matters:** This helps engineers build better Brain-Computer Interfaces (BCIs) so paralyzed individuals can control prosthetic limbs or wheelchairs using thought alone.
 
----
-
-## Visualizations
-
-| **3D State-Space Trajectories** | **Time-Resolved Divergence Profile** |
-| :---: | :---: |
-| ![3D Trajectory](results/figures/trajectory_manifold_3d.png) | ![Latent Distance](results/figures/trajectory_distance_over_time.png) |
-| *Trial-averaged 3D state-space trajectories ($t = -0.5\text{s}$ to $3.0\text{s}$).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
-
----
 
 ## Abstract
 
@@ -31,7 +21,6 @@ Understanding the degree to which Motor Execution (ME) and Motor Imagery (MI) sh
 
 Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band ($8\text{--}30\text{ Hz}$), followed by analytic envelope extraction via the Hilbert transform. Supervised Common Spatial Patterns (CSP) spatial filtering projected trial dynamics into a 3D state space. A non-parametric Monte Carlo permutation test ($N=1000$) confirmed significant geometric divergence ($p = 0.0000$, observed distance $0.3207\,\mu\text{V}$ vs. null mean $0.1612\,\mu\text{V}$), providing empirical evidence of distinct subspace pathways during physical vs. imagined movement.
 
----
 
 ## Directory Structure
 
@@ -78,7 +67,16 @@ Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band
 │  • Distinct Pathways   │    │    tation Test (N=1000)│
 └────────────────────────┘    └────────────────────────┘
 ```
+---
 
+## Visualizations
+
+| **3D State-Space Trajectories** | **Time-Resolved Divergence Profile** |
+| :---: | :---: |
+| ![3D Trajectory](results/figures/trajectory_manifold_3d.png) | ![Latent Distance](results/figures/trajectory_distance_over_time.png) |
+| *Trial-averaged 3D state-space trajectories ($t = -0.5\text{s}$ to $3.0\text{s}$).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
+
+---
 ## Installation & Environment Setup
 
 ```text
