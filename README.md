@@ -62,7 +62,8 @@ Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band
 ├── README.md                           # Project documentation
 ├── RESULTS.md                          # Detailed statistical findings & interpretations
 └── requirements.txt                    # Project dependencies
----
+```text
+
 ## Methodological Pipeline 
 
 ┌────────────────────────┐    ┌────────────────────────┐    ┌────────────────────────┐
