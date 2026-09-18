@@ -1,0 +1,12 @@
+.ipynb_checkpoints/
+
+# Exclude heavy data arrays
+data/*.npy
+
+# Exclude virtual environment & caches
+venv/
+__pycache__/
+*.pyc
+
+# System files
+.DS_Store

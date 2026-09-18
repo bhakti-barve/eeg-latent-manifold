@@ -1,0 +1,18 @@
+dataset:
+  sampling_rate: 160
+  num_channels: 64
+  conditions:
+    rest: "T0"
+    motor_execution: "T1"
+    motor_imagery: "T2"
+
+preprocessing:
+  random_seed: 42
+  train_split: 0.8
+
+pca:
+  n_components: 3
+
+stats:
+  n_permutations: 1000
+  alpha: 0.05
