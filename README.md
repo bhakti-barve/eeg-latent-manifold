@@ -115,5 +115,13 @@ python src/visualize_distance.py
 
 ## Summary of Results
 ```text
-Parameter/ MetricEmpirical ValueDatasetPhysioNet EEG Motor Movement/Imagery (S001)Sample Size ($N$)$N = 45$ trials per condition (Hand Motor Tasks)Observed Trajectory Distance$0.3207\,\mu\text{V}$Null Distribution Mean$0.1612\,\mu\text{V}$Permutations ($N_{\text{perm}}$)$1000$ iterationsEmpirical $p$-value$p = 0.0000$ ($p < 0.001$)VerdictStatistically Significant Divergence
+| Parameter / Metric | Empirical Value |
+| :--- | :--- |
+| **Dataset** | PhysioNet EEG Motor Movement/Imagery (S001) |
+| **Sample Size ($N$)** | $N = 45$ trials per condition (Hand Motor Tasks) |
+| **Observed Trajectory Distance** | $0.3207\,\mu\text{V}$ |
+| **Null Distribution Mean** | $0.1612\,\mu\text{V}$ |
+| **Permutations ($N_{\text{perm}}$)** | $1000$ iterations |
+| **Empirical $p$-value** | $p = 0.0000$ ($p < 0.001$) |
+| **Verdict** | Statistically Significant Divergence |
 ```
