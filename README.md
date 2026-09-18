@@ -123,3 +123,8 @@ python src/visualize_distance.py
 | **Empirical $p$-value** | $p = 0.0000$ ($p < 0.001$) |
 | **Verdict** | Statistically Significant Divergence |
 
+## Limitations & Future Work
+
+* **Single-Subject Scope ($N=1$):** This study validated latent manifold divergence specifically within Subject S001. While internal validity was established via Monte Carlo permutation testing ($p = 0.0000$), external validity across diverse populations requires cross-subject testing.
+* **Next Steps:** Extend the CSP manifold extraction pipeline across all 109 subjects in the PhysioNet dataset to evaluate cross-subject transfer learning and inter-individual manifold alignment (e.g., via Procrustes analysis or optimal transport).
+
