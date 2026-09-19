@@ -4,15 +4,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![MNE-Python](https://img.shields.io/badge/MNE-EEG-purple.svg)](https://mne.tools/stable/index.html)
 
-## What Does This Project Do?
-
-Imagine your brain as a radio station. When you physically open and close your hand, your brain sends out a specific electrical signal. When you **only imagine** opening and closing your hand, your brain sends out a very similar signal—so similar that standard computer algorithms often mix them up.
-
-This project takes complex, multi-channel brainwave recordings (EEG) and uses advanced mathematics to draw a **3D map of brain activity over time**. 
-
-* **The Goal:** Prove that physically moving your hand vs. imagining moving your hand actually follow two distinct 3D pathways (trajectories) in the brain.
-* **The Result:** We proved with 99.9%+ statistical confidence ($p = 0.0000$) that these two mental tasks follow distinct routes.
-* **Why It Matters:** This helps engineers build better Brain-Computer Interfaces (BCIs) so paralyzed individuals can control prosthetic limbs or wheelchairs using thought alone.
 
 ## Scientific Framework & Hypothesis Testing
 
@@ -28,6 +19,7 @@ To rigorously evaluate whether Motor Execution (ME) and Motor Imagery (MI) follo
 
 * **Null Hypothesis ($H_0$):** 
   There is no true geometric difference between Motor Execution and Motor Imagery pathways in the reduced 3D latent state space. Any observed Euclidean distance between their condition-averaged trajectories is driven purely by random background EEG noise and trial-to-trial sampling variability ($\mu_{\text{dist, ME}} = \mu_{\text{dist, MI}}$).
+
 
 * **Alternative Hypothesis ($H_1$):** 
   Motor Execution and Motor Imagery follow statistically distinct temporal trajectories within the 3D latent state space ($\mu_{\text{dist, ME}} \neq \mu_{\text{dist, MI}}$), driven by differences in somatosensory feedback and motor inhibition mechanisms.
