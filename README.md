@@ -101,13 +101,6 @@ Preprocessed signals were bandpass filtered to the sensorimotor $\mu/\beta$ band
 ```
 ---
 
-## Visualizations
-
-| **3D State-Space Trajectories** | **Time-Resolved Divergence Profile** |
-| :---: | :---: |
-| ![3D Trajectory](results/figures/trajectory_manifold_3d.png) | ![Latent Distance](results/figures/trajectory_distance_over_time.png) |
-| *Trial-averaged 3D state-space trajectories ($t = -0.5\text{s}$ to $3.0\text{s}$).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
-
 ---
 ## Installation & Environment Setup
 
@@ -154,6 +147,14 @@ python src/visualize_distance.py
 | **Permutations ($N_{\text{perm}}$)** | $1000$ iterations |
 | **Empirical $p$-value** | $p = 0.0000$ ($p < 0.001$) |
 | **Verdict** | Statistically Significant Divergence |
+
+## Visualizations
+
+| **3D State-Space Trajectories** | **Time-Resolved Divergence Profile** |
+| :---: | :---: |
+| ![3D Trajectory](results/figures/trajectory_manifold_3d.png) | ![Latent Distance](results/figures/trajectory_distance_over_time.png) |
+| *Trial-averaged 3D state-space trajectories ($t = -0.5\text{s}$ to $3.0\text{s}$).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
+
 
 ## Limitations & Future Work
 
