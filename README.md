@@ -155,7 +155,7 @@ python src/visualize_distance.py
 | **3D State-Space Trajectories** | **Time-Resolved Divergence Profile** |
 | :---: | :---: |
 | ![3D Trajectory](results/figures/trajectory_manifold_3d.png) | ![Latent Distance](results/figures/trajectory_distance_over_time.png) |
-| *Trial-averaged 3D state-space trajectories ($t = -0.5\text{s}$ to $3.0\text{s}$).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
+| *Trial-averaged 3D state-space trajectories (t = -0.5 to 3.0).* | *Euclidean distance over time with 95% bootstrap confidence intervals.* |
 
 ---
 
