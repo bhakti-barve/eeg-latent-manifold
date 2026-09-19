@@ -14,6 +14,46 @@ This project takes complex, multi-channel brainwave recordings (EEG) and uses ad
 * **The Result:** We proved with 99.9%+ statistical confidence ($p = 0.0000$) that these two mental tasks follow distinct routes.
 * **Why It Matters:** This helps engineers build better Brain-Computer Interfaces (BCIs) so paralyzed individuals can control prosthetic limbs or wheelchairs using thought alone.
 
+## Scientific Framework & Hypothesis Testing
+
+### 1. Conceptual Problem Statement
+When you physically open and close your hand (**Motor Execution**), your brain generates a specific sequence of electrical signals across the sensorimotor cortex. When you **only imagine** opening and closing your hand (**Motor Imagery**), your brain activates a very similar neural network—so similar that standard, unsupervised computer algorithms (like raw voltage thresholding or principal component analysis) often fail to distinguish them. 
+
+Determining whether these two mental states follow identical or distinct dynamic pathways is a foundational challenge in computational neuroscience and Brain-Computer Interface (BCI) design.
+
+---
+
+### 2. Formal Hypotheses
+To rigorously evaluate whether Motor Execution (ME) and Motor Imagery (MI) follow distinct geometric paths in low-dimensional state space, this project formally tests the following hypotheses:
+
+* **Null Hypothesis ($H_0$):** 
+  There is no true geometric difference between Motor Execution and Motor Imagery pathways in the reduced 3D latent state space. Any observed Euclidean distance between their condition-averaged trajectories is driven purely by random background EEG noise and trial-to-trial sampling variability ($\mu_{\text{dist, ME}} = \mu_{\text{dist, MI}}$).
+
+* **Alternative Hypothesis ($H_1$):** 
+  Motor Execution and Motor Imagery follow statistically distinct temporal trajectories within the 3D latent state space ($\mu_{\text{dist, ME}} \neq \mu_{\text{dist, MI}}$), driven by differences in somatosensory feedback and motor inhibition mechanisms.
+
+---
+
+### 3. Methodology Used to Test the Hypotheses
+
+To test $H_0$ vs $H_1$ without making parametric assumptions about noisy EEG signals, we constructed a supervised spatial filtering and non-parametric validation pipeline:
+
+1. **Signal Isolation ($\mu/\beta$ Rhythms):** 64-channel continuous EEG signals were bandpass-filtered to $8\text{--}30\text{ Hz}$, isolating sensorimotor rhythms that desynchronize during motor tasks.
+2. **Analytic Envelope Extraction:** Instantaneous power envelopes were extracted via the Hilbert transform to capture amplitude modulation over time.
+3. **Supervised Dimensionality Reduction (CSP):** Supervised Common Spatial Patterns (CSP) spatial filters were trained on hand-specific tasks ($N = 45$ trials per condition) to find spatial axes that maximize variance ratios between Execution and Imagery, projecting 64 channel streams into a 3D state-space coordinate system $(X, Y, Z)$.
+4. **Non-Parametric Monte Carlo Permutation Testing ($N_{\text{perm}} = 1000$):** 
+   To establish a true empirical null distribution ($H_0$), trial labels (Execution vs. Imagery) were randomly shuffled $1,000$ times. The exact CSP projection and point-by-point trajectory distance calculation were re-executed on every shuffle. The true observed trajectory distance ($0.3207\,\mu\text{V}$) was then compared against this empirical null distribution ($0.1612\,\mu\text{V}$ mean), resulting in an empirical $p$-value of $p = 0.0000$ and rejecting $H_0$.
+
+---
+
+### 4. Why This Distinction Matters
+
+Proving that Motor Execution and Motor Imagery occupy distinct low-dimensional pathways is critical for three reasons:
+
+* **Preventing Accidental Prosthetic Execution in BCIs:** If a robotic limb or neuroprosthetic cannot tell execution apart from imagery, a user merely *thinking* about or mentally rehearsing a movement could trigger an accidental, unsafe physical action.
+* **Building Continuous Decoding Models:** Modern BCIs rely on continuous trajectory tracking (e.g., Kalman filters or recurrent neural networks). Proving that imagery traces its own stable, smooth pathway enables decoders to be calibrated specifically for paralyzed individuals who can only generate imagery signals.
+* **Targeted Neurorehabilitation:** Stroke patients use motor imagery therapy to rebuild damaged neural circuits. Proving that imagery activates a distinct, structured trajectory confirms that mental practice actively drives organized neural population dynamics, offering a target for real-time neurofeedback.
+
 
 ## Abstract
 
